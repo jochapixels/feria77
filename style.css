@@ -1,0 +1,258 @@
+html,
+body {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#fpsLabel {
+  position: absolute;
+  top: 25px;
+  z-index: 3;
+  background: blanchedalmond
+}
+
+#debugLabel {
+  position: absolute;
+  top: 5px;
+  z-index: 3;
+  background: blanchedalmond
+}
+
+.back-zoom {
+  position: absolute;
+  z-index: 1000;
+  bottom: 15px;
+  left: 20px;
+  font-size: 74px;
+  line-height: 1;
+  font-weight: 400;
+  color: #fff;
+  opacity:0;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.back-zoom.open {
+  opacity: 1;
+}
+/* CHATBOT TEST*/
+.output{
+  background-color: #d85757;
+  position: relative;
+  margin:10px 35px;
+  width:70%;
+  height: 7%;
+	border-radius: 10px;
+  color:#fff;
+
+}
+
+  #container {
+  margin: 35px 35px 25px 35px;
+  background-color: #f0db4f;
+  justify-content: center;
+  margin-top: 0px;
+}
+
+.chat-text{
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  color: #ffffff; 
+  position: absolute;
+  margin-top: 0px;
+  left: 0px;
+  top: 4px;
+	/*margin:5px 10px 0;*/
+}
+
+.input-elem {
+  background-color: #0c83e2;
+  position: relative;
+  margin:10px 95px;
+  width:70%;
+  height: 7%;
+	border-radius: 10px;
+  color:#fff;
+}
+
+#typing-elem {
+  position: absolute;
+  background-color: #323334;
+  left: 3%;
+  top: 85%;
+  width:34%;
+  height: 7%;
+	border-radius: 10px;
+  color:#fff;
+}
+input{
+  background-color: #0c82e200;
+  margin:12px 15px;
+  color:#ffffff;
+}
+
+::placeholder {
+  color: #eeeeee;
+  opacity: 1; /* Firefox */
+}
+/*INFOBOXEN TEST*/
+.infobox {
+  position: fixed;
+  z-index: 2;
+  left: -65%;
+  top: 25%;
+  max-height: 1px;
+  color: #fff;
+  opacity:1;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+}
+
+.videobox {
+  position: fixed;
+  z-index: 2;
+  right: -5%;
+  top:25%;
+  max-height: 1px;
+  color: #fff;
+  opacity:1;
+  cursor: pointer;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+}
+
+.infobox.open{
+  left: 30%;
+}
+.infobox.close{
+  left: -65%;
+}
+
+.videobox.open{
+  right: 0%;
+}
+
+.videobox.close{
+right: -65%;
+}
+
+.info-overlay {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  -webkit-transition: all ease 500ms;
+  transition: all ease 500ms;
+}
+
+.info-overlay.open {
+  z-index: 1;
+  opacity: 1;
+}
+
+.info-overlay.close {
+  z-index: -1;
+  opacity: 0;
+}
+/*INFOBOXEN TEST*/
+
+/*BABYLON CSS*/
+#renderCanvas {
+    width: 100%;
+    height: 100%;
+    touch-action: none;
+    /*  */
+}
+
+/*DEBUG CSS*/
+#fpslabel {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: #999;
+    cursor: default;
+}
+
+/* X ICON */
+.x-icon {
+  position: absolute;
+  z-index: -1;
+  top: 15px;
+  right: 20px;
+  font-size: 36px;
+  line-height: 1;
+  font-weight: 400;
+  color: #fff;
+  opacity: 0;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.x-icon.open {
+  position: fixed;
+  z-index: 3;
+  opacity: 1;
+}
+/*VIDEO controller CSS*/
+.video-overlay {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    -webkit-transition: all ease 500ms;
+    transition: all ease 500ms;
+  }
+  
+  .video-overlay.open {
+    position: fixed;
+    z-index: 1000;
+    opacity: 1;
+  }
+  
+  .video-overlay-close {
+    position: absolute;
+    z-index: 1000;
+    top: 15px;
+    right: 20px;
+    font-size: 36px;
+    line-height: 1;
+    font-weight: 400;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-transition: all 200ms;
+    transition: all 200ms;
+  }
+
+  
+  .video-overlay-close:hover, .x-icon:hover, .back-zoom:hover{
+    color: #fa183d;
+  }
+  
+  .video-overlay iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+    /* width: 90%; */
+    /* height: auto; */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.75);
+  }

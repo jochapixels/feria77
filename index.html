@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>La 77 BTL: Ferias Virtuales</title>
+    <!-- Style-->
+    <link href="style.css" rel="stylesheet">
+    <link href="project-info-style.css" rel="stylesheet">
+    <!-- gsap animation-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.2/gsap.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.babylonjs.com/babylon.js"></script>
+    <script src="https://cdn.babylonjs.com/inspector/babylon.inspector.bundle.js"></script>
+    <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
+    <script src="https://cdn.babylonjs.com/materialsLibrary/babylonjs.materials.min.js"></script>
+    <script src="https://cdn.babylonjs.com/postProcessesLibrary/babylonjs.postProcess.min.js"></script>
+    <script src="https://cdn.babylonjs.com/gui/babylon.gui.min.js"></script>
+    <script src="https://cdn.babylonjs.com/proceduralTexturesLibrary/babylonjs.proceduralTextures.min.js"></script>
+    <script src="https://cdn.babylonjs.com/serializers/babylonjs.serializers.min.js"></script>
+    <script src="https://cdn.babylonjs.com/cannon.js"></script>
+    <script src="https://code.jquery.com/pep/0.4.3/pep.js"></script>
+</head>
+
+<body>
+    <div id="fpsLabel"></div>
+    <div id="debugLabel">Key 1: Primera Persona, Key 2: Camara de Rotacion, Key i: LiveStreaming</div>
+
+    <div id="video-overlay" class="video-overlay">
+        <a class="video-overlay-close">&times;</a>
+    </div>
+
+    <a class="back-zoom">&larr;</a>
+    <!-- INFOBOXEN -->
+    <div id="info-overlay" class="info-overlay">
+        <div id="infobox" class="infobox">
+            <img style="width: 75%" src="./assets/3d.png" alt="infotext">
+        </div>
+        <div id="video-box" class="videobox">
+            <img style="width: 75%" src="./assets/Linde_Videobox.png" alt="infotext">
+        </div>
+    </div>
+    <!-- INFOBOXEN END -->
+    <!-- CHATBOT WINDOW-->
+    <div class="project-overlay" id="project-chatbot">
+        <div class="project-content">
+            <div class="textbox" id="chatbot-text">
+                <h2>What´s in your mind?</h2>
+                <h1>Lets get to know each other!</h1>
+                <div id="typing-elem">
+                    <input type="text" value="" placeholder="reply here ...">
+                </div>
+            </div>
+
+            <div class="filmbox">
+                <p>Recordbay GmbH<br>Madrider Straße 2<br>D-41069 Mönchengladbach<br><br>T +49 (0)2161-27758-00<br><br>sebastian@recordbay.de</p>
+                <h1>Contact us!</h1>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+
+    <!-- Project Information Overlay -->
+    <div class="bg-overlay"></div>
+    <a class="x-icon">&times;</a>
+    <div class="project-overlay" id="project-linde">
+        <div class="project-content">
+            <div class="textbox">
+                <h2>Linde Material Handling</h2>
+                <h1>3D product film campaign</h1>
+                <p>For the renowned manufacturer of forklift trucks, we developed tailor-made 3D films for their new top
+                    products. How can prototypes of new vehicles be put in the best possible light in action? Linde
+                    Material Handling, the world-renowned manufacturer of forklift trucks and warehouse technology
+                    equipment, decided on a 3D presentation.<br><br>We designed and animated several 3D films for the
+                    launch of the new combustion engine forklift H20-35 and the order picking truck N20. The strengths
+                    of the forklift truck were presented in individual film stories in the areas of Safety, Efficiency,
+                    Operating Experience and Hydrostatic Drive in a 3D external warehouse.<br><br>
+                    Another film summarized all highlights in dynamic action scenes. For the N20 order picker we created
+                    a complete 3D film in a warehouse. For both films, people were completely animated. The films were
+                    adapted in five languages and used internationally for various purposes.</p>
+            </div>
+            <div class="filmbox">
+                <video class="film-values" src="assets/Messestand Format hb.mp4" controls></video>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+
+    <div class="project-overlay" id="project-deutsche-telekom">
+        <div class="project-content">
+            <div class="textbox">
+                <h2>Deutsche Telekom</h2>
+                <h1>Magenta Smart Home image campaign</h1>
+                <p>The time is right for Smart Home! Authentic, approachable, direct - our video campaign about magenta
+                    Smart Home communicates state-of-the-art technology at eye level.<br><br>When people think of „smart
+                    home“, many people still think of tangled cables, complicated technology or even hackers. However,
+                    Telekom’s Magenta SmartHome proves that the technology has long been safe, mature and easy to use.
+                    The aim of its strategic image campaign is to overcome reservations. The aim was to show in an
+                    authentic way that the time is simply ripe for the smart home - for everyone, not just for the
+                    techies among us. The following three questions should be answered with the films: What is Smart
+                    Home anyway? What advantages does Magenta SmartHome offer? How does it work?</p>
+            </div>
+            <div class="filmbox">
+                <div class="film-values">
+                    <div style="padding:56.25% 0 0 0;position:relative;"><iframe
+                            src="https://player.vimeo.com/video/385484757?color=d85757&title=0&byline=0&portrait=0"
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0"
+                            allow="autoplay; fullscreen" allowfullscreen></iframe></div>
+                    <script src="https://player.vimeo.com/api/player.js"></script>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+
+
+    <div class="project-overlay" id="project-ssi-schaefer">
+        <div class="project-content">
+            <div class="textbox">
+                <h2>SSI Schäfer</h2>
+                <h1>Hololens Experience</h1>
+                <p>Product stories as holograms - a visitor magnet for trade fairs. Through our HoloLens experience for
+                    SSI Schäfer, sophisticated packaging technologies are explained clearly and in detail.<br><br>
+                    For its trade fair appearance at the Logimat, SSI Schäfer, the world’s most powerful supplier of
+                    products and systems for internal material flow and waste management, needed a solution that would
+                    explain packaging products in a simple and entertaining way. With a HoloLens Experience, we made
+                    various functions and application possibilities tangible.<br><br>
+                    An example of this was the use on Märklin’s model railways, whose elaborately painted, sensitive
+                    individual parts required a unique container concept. As development partner of the agency 361/DRX
+                    GmbH, RECORDBAY took over the technical implementation of the HoloLens Experience. We implemented a
+                    storyline consisting of interactively selectable sequences with special image and video material.
+                </p>
+            </div>
+            <div class="filmbox">
+                <div class="film-values">
+                    <div style="padding:56.25% 0 0 0;position:relative;"><iframe width="100%" height="auto"
+                            src="https://www.youtube.com/embed/o0fQCOo6gUY"
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0"
+                            style="width:100%;height:100%;"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe></div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+
+    <div class="project-overlay" id="project-bayer-ag">
+        <div class="project-content">
+            <div class="textbox">
+                <h2>Bayer AG</h2>
+                <h1>360° App</h1>
+                <p>One app, all corporate worlds: A VR experience around Bayer AG with the Cardboard and an innovative
+                    app solution.<br><br>
+                    Bayer AG approached us to provide an app to accompany the Bayer event „Day One“, which received
+                    worldwide attention. We developed the concept of a 360°-degree app, which makes different parts of
+                    the group (Pharma, Animal Care, Consumer Health, Digital Crop Science) audiovisually experienceable
+                    for internal and external users.<br><br>
+                    In the technical implementation we developed a 2D and 3D design to meet the high visual
+                    requirements. On this basis, we then designed a complete Bayer Group world in 360°, in which we
+                    interweaved real image and 3D models.</p>
+            </div>
+            <div class="filmbox">
+                <div class="film-values">
+                    <div style="padding:56.25% 0 0 0;position:relative;"><iframe
+                            src="https://player.vimeo.com/video/385015457?color=d85757&title=0&byline=0&portrait=0"
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0"
+                            allow="autoplay; fullscreen" allowfullscreen></iframe></div>
+                    <script src="https://player.vimeo.com/api/player.js"></script>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+
+
+    <div class="project-overlay" id="project-bombardier">
+        <div class="project-content">
+            <div class="textbox">
+                <h2>Bombardier Transportation</h2>
+                <h1>Tangible Table Experience</h1>
+                <p>Get sales conversations moving with digital installations. For our client Bombardier Transportation
+                    we developed an interactive exhibition stand with tangible table experience. We created exciting
+                    worlds in 3D.<br><br>
+                    To convince customers of future mobility concepts at trade fairs, our client Bombardier
+                    Transportation needed a permanent solution. For Bombardier’s global trade fair presence, we
+                    developed interactive digital installations and animated elaborate 3D worlds. Impressive, clear,
+                    sustainable - on tangible tables and interactive screens we digitally staged mobility solutions for
+                    urban areas of various sizes.<br><br>
+                    We recreated the complete traffic infrastructure in 3D models and animations, meticulously and with
+                    great attention to detail. Customers can have individual vehicle models such as trains presented in
+                    3D by the experts and explained on the tables and screens. The focus was on simple operation.</p>
+            </div>
+            <div class="filmbox">
+                <div class="film-values">
+                    <div style="padding:56.25% 0 0 0;position:relative;"><iframe
+                            src="https://player.vimeo.com/video/296001541?color=d85757&title=0&byline=0&portrait=0"
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0"
+                            allow="autoplay; fullscreen" allowfullscreen></iframe></div>
+                    <script src="https://player.vimeo.com/api/player.js"></script>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+
+
+    <div class="project-overlay" id="project-varycon">
+        <div class="project-content">
+            <div class="textbox">
+                <h2>Varycon</h2>
+                <h1>Innovative cloud-based platform for scalable content production and management</h1>
+                <p>VARYCON is more than just a platform for adapting video content quickly and easily. With our
+                    additional services, VARYCON enables our customers to plan and creatively implement their content
+                    strategy and integrate VARYCON into their business processes.<br><br>
+                    Render new video versions within minutes Avoid costly and time-consuming coordination. Using VARYCON
+                    does not require any video editing skills or software.<br><br>
+                    Use templates to easily create numerous videos, e.g. for all products in your shop, or connect your
+                    CRM to VARYCON to render thousands of personalized videos at the push of a button. Optimize video
+                    templates to achieve precise strategic goals while benefiting from predictable costs and
+                    expenses.<br><br>
+                    Securely access and edit your video projects from anywhere in the world and render with fast cloud
+                    servers - without any loss of quality. VARYCON is supported by industry-leading security and data
+                    protection measures. In addition, visual watermarks on pre-rendered videos prevent them from being
+                    used before they are approved by defined decision makers.</p>
+            </div>
+            <div class="filmbox">
+                <div class="film-values">
+                    <div style="padding:56.25% 0 0 0;position:relative;"><iframe
+                            src="https://player.vimeo.com/video/379061838?color=d85757&title=0&byline=0&portrait=0"
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0"
+                            allow="autoplay; fullscreen" allowfullscreen></iframe></div>
+                    <script src="https://player.vimeo.com/api/player.js"></script>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+
+    <!-- Project Information Overlay end -->
+
+    <video class="scene-vid" style="display:none" muted loop autoplay>
+        <source src="assets/all screens video.mp4" type="video/mp4" />
+    </video>
+    <!---video class="scene-vid" style="display:none" muted loop autoplay>
+        <source src="assets/screenVert_ref 4_1.mp4" type="video/mp4" />
+    </video>
+    <video class="scene-vid" style="display:none" muted loop autoplay>
+        <source src="assets/screenVert_ref 3.mp4" type="video/mp4" />
+    </video>
+    <video class="scene-vid" style="display:none" muted loop autoplay>
+        <source src="assets/screenVert_ref 4.mp4" type="video/mp4" />
+    </video>
+    <video class="scene-vid" style="display:none" muted loop autoplay>
+        <source src="assets/screenVert_ref 2.mp4" type="video/mp4" />
+    </video-->
+
+    <canvas id="renderCanvas" touch-action="none"></canvas> //touch-action="none" for best results from PEP
+
+    <script type="text/javascript" src="js/InputController.js"></script>
+    <script type="text/javascript" src='js/AnimationController.js'></script>
+    <script type="text/javascript" src='js/HelperFunctions.js'></script>
+    <script type="text/javascript" src='js/GameManager.js'></script>
+    <script type="text/javascript" src='js/ManipulateImported.js'></script>
+    <script type="text/javascript" src='js/MaterialManager.js'></script>
+    <script type="text/javascript" src='js/MeshLoaderCtrl.js'></script>
+    <script type="text/javascript" src='js/CameraManager.js'></script>
+    <script type="text/javascript" src='js/PostEffects.js'></script>
+    <script type="text/javascript" src='js/HandleStreaming.js'></script>
+    <script type="text/javascript" src='js/index.js'></script>
+    <script type="text/javascript" src='js/fakechatbot.js'></script>
+
+
+
+</body>
+
+</html>

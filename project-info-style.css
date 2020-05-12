@@ -1,0 +1,221 @@
+/* Project Information Box Overlay */
+
+@charset "UTF-8";
+
+* {
+	padding:0;
+	margin:0;
+	font-size:100%;
+	border:none;
+	text-decoration:none;
+	font-weight:normal;
+	}
+	
+
+.clear {
+	clear: both;
+	}
+
+
+html,
+body {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+.project-overlay{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    left: 0px;
+    position: absolute;
+    opacity: 1;
+    z-index: 2;
+    /*background-color: rgba(0,0,0,0.6);*/
+}
+
+
+.bg-overlay {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    -webkit-transition: all ease 500ms;
+    transition: all ease 500ms;
+  }
+  
+  .bg-overlay.open {
+    z-index: 1;
+    opacity: 1;
+  }
+  
+
+.project-content{
+    width: 70%;
+    height: 70%;
+    position: relative;
+    top: 15%;
+    left: 15%;
+    opacity: 1;
+    z-index: 2;
+}
+
+.textbox{
+    width: 40%;
+    height: 100%;
+    background-color: #e6e6e6;
+    background:linear-gradient(145deg, rgba(230,230,230,1) 0%, rgba(255,255,255,1) 100%);
+    border-radius: 20px;
+    float: left;
+    overflow-y: auto;
+}
+
+
+/* Scrollbar Aussehen*/
+
+.textbox::-webkit-scrollbar-track{
+    margin: 15px 0 15px 0;
+}
+
+.textbox::-webkit-scrollbar{
+	width: 6px;
+}
+
+.textbox::-webkit-scrollbar-thumb{
+	border-radius: 10px;
+	background-color: #d4d4d4;
+}
+
+.filmbox{
+    width: 58%;
+    height: 100%;
+    background-color: #e6e6e6;
+    background:linear-gradient(145deg, rgba(230,230,230,1) 0%, rgba(255,255,255,1) 100%);
+    border-radius: 20px;
+    float: left;
+    margin-left: 2%;
+    text-align: center;
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.film-values {
+    width: 80%;
+    height: auto;
+    max-height: 100%;
+    margin: auto;
+}
+
+
+h1{
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 50px;
+    color: #323334;
+    margin: 0 35px 25px 35px;
+}
+
+h2{
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #d85757;
+    margin: 35px 35px 25px 35px;
+}
+
+p{
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    color: #6b6b6b; 
+    margin: 0 35px 35px 35px;
+}
+
+
+
+/* Infoboxen verstecken */
+
+#project-linde{
+    display:none;
+}
+
+#project-deutsche-telekom{
+    display: none;
+}
+
+#project-ssi-schaefer{
+    display: none;
+}
+
+#project-bayer-ag{
+    display: none;
+}
+
+#project-bombardier{
+    display: none;
+}
+
+#project-varycon{
+    display: none;
+}
+
+#project-chatbot{
+    display: none;
+}
+
+
+/* Media/Responsive Anpassungen für schmale/kleine Devices */
+
+@media screen and (max-width: 1100px){
+    
+    .textbox{
+    width: 100%;
+    height: 50%;
+    float: none;
+    }
+    
+    .filmbox{
+    width: 100%;
+    height: 48%;
+    float: none;
+    margin-left: 0;
+    margin-top: 2%;
+    }
+    
+    #typing-elem{
+        top: 42%;
+        left: 5.5%;
+        width: 70%;
+    }
+}
+
+
+@media screen and (max-width: 600px){
+    
+    .project-content{
+    width: 85%;
+    height: 85%;
+    top: 7.5%;
+    left: 7.5%;
+    }
+     
+}
